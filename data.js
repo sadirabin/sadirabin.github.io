@@ -24,7 +24,7 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15b"
   },
 
   hero: {
@@ -107,7 +107,7 @@ window.SITE = {
       org: "Generative AI · prompt design",
       role: "",
       dates: "Mar 2026 – Apr 2026",
-      place: "College Park, MD",
+      place: "",
       summary: "Comparing how four LLMs respond to two ways of structuring the same prompt.",
       problem:
         "For a financial-advice assistant, the same request can produce very different output depending on the model and on how the prompt is structured.",
@@ -128,7 +128,7 @@ window.SITE = {
       org: "n8n multi-agent automation",
       role: "",
       dates: "Mar 2026 – Apr 2026",
-      place: "College Park, MD",
+      place: "",
       summary: "One automated feed of job postings, movie info and local weather, replacing daily checks of three sites.",
       problem:
         "Checking three sites every day for job postings, movie information and the weather is repetitive work, and the same pattern (pulling data from separate systems into one view) is at the core of business systems analysis.",
@@ -265,7 +265,7 @@ window.SITE = {
       title: "LLM Reliability Analysis",
       org: "",
       dates: "Mar 2026 – Apr 2026",
-      place: "College Park, MD",
+      place: "",
       bullets: [
         "Compared how 4 AI chatbots (ChatGPT, Gemini, Claude, Perplexity) handled the same financial-advice task under 2 prompt structures (COSTAR and a 6-step format), 8 model-and-prompt combinations in all",
         "Reviewed each output for structure and depth; Claude gave the most organized plan under both prompt structures"
@@ -275,7 +275,7 @@ window.SITE = {
       title: "Personal Information Hub",
       org: "n8n Automation",
       dates: "Mar 2026 – Apr 2026",
-      place: "College Park, MD",
+      place: "",
       bullets: [
         "Built an n8n workflow pulling job postings (Indeed), movie info (IMDb) and local weather into one automated feed, replacing daily checks of 3 sites",
         "Coordinated a main agent and 3 sub-agents to call each REST API and clean nested JSON into structured tables"
