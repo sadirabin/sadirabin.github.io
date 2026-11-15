@@ -2,70 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sadi Rabin · Resume</title>
-<meta name="description" content="Resume of Sadi Rabin, Information Systems & Marketing student at UMD's Smith School of Business.">
-<style>
-  /* Resume page: built from data.js, no phone number. Print it (Cmd+P) to make a PDF. */
-  :root { --ink: #14201a; --muted: #47524b; --accent: #1b6b43; --rule: #14201a; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #e9e8e0; color: var(--ink); font: 400 9.2pt/1.26 "Helvetica Neue", Arial, sans-serif; }
-  .bar { max-width: 8.5in; margin: 1rem auto; display: flex; gap: 1.25rem; align-items: center; padding: 0 .25rem; font-size: 11pt; }
-  .bar a { color: var(--ink); font-weight: 600; }
-  .bar .dl { margin-left: auto; background: var(--accent); color: #fff; padding: .55rem 1.1rem; border-radius: 999px; text-decoration: none; }
-  .page { background: #fff; max-width: 8.5in; margin: 0 auto 2rem; padding: .4in .5in; }
-  h1 { font-size: 18pt; margin: 0; letter-spacing: .01em; text-align: center; }
-  .contact { text-align: center; margin: .2rem 0 .5rem; }
-  .contact a { color: var(--accent); }
-  h2 { font-size: 9.8pt; letter-spacing: .06em; text-transform: uppercase; margin: .5rem 0 .2rem; padding-bottom: .12rem; border-bottom: 1.5px solid var(--rule); }
-  p { margin: 0; }
-  .row { display: flex; justify-content: space-between; gap: 1rem; margin-top: .3rem; }
-  .row strong { font-weight: 700; }
-  .row span { white-space: nowrap; }
-  ul { margin: .1rem 0 0; padding-left: 1.15rem; }
-  li { margin-bottom: .08rem; }
-  .skills p { margin-bottom: .1rem; }
-  em { color: var(--muted); }
-  a { color: var(--accent); }
-  :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-  @media (max-width: 640px) { .page { padding: 1.25rem; } .row { flex-direction: column; gap: 0; } .row span { white-space: normal; } }
-  @page { size: letter; margin: 0; }
-  @media print { body { background: #fff; } .bar { display: none; } .page { margin: 0; max-width: none; } }
-</style>
+<meta http-equiv="refresh" content="0; url=assets/Sadi_Rabin_Resume.pdf?v=2026-11-15">
+<link rel="canonical" href="assets/Sadi_Rabin_Resume.pdf">
 </head>
 <body>
-<nav class="bar" aria-label="Resume actions">
-  <a href="index.html">← Back to portfolio</a>
-  <a class="dl" id="dl" href="#" download>Download PDF</a>
-</nav>
-<main class="page" id="page"></main>
-<script src="data.js?v=20261115e"></script>
-<script>
-(function () {
-  var S = window.SITE, m = S.meta, e = S.education;
-  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
-  function right(x) { return [x.link ? '<a href="' + esc(x.link.href) + '">' + esc(x.link.label) + "</a>" : "", esc(x.dates), esc(x.place)].filter(Boolean).join(" | "); }
-  function block(title, org, x) {
-    return '<div class="row"><p><strong>' + esc(title) + (org ? " | " + esc(org) : "") + "</strong></p><span>" + right(x) + "</span></div><ul>" +
-      x.bullets.map(function (b) { return "<li>" + esc(b) + "</li>"; }).join("") + "</ul>";
-  }
-  document.getElementById("dl").href = m.resumePdf;
-  document.getElementById("page").innerHTML =
-    "<h1>" + esc(m.name.toUpperCase()) + "</h1>" +
-    '<p class="contact">' + esc(m.location) + ' | <a href="mailto:' + esc(m.email) + '">' + esc(m.email) + '</a> | <a href="' + esc(m.linkedin) + '">' + esc(m.linkedinLabel) + "</a>" +
-      (m.tableau ? ' | <a href="' + esc(m.tableau) + '">Tableau Portfolio</a>' : "") + "</p>" +
-    "<h2>Education</h2>" +
-    '<div class="row"><p><strong>' + esc(e.school) + "</strong></p><span>" + esc(e.date) + (e.place ? " | " + esc(e.place) : "") + "</span></div>" +
-    "<p><em>" + esc(e.degree) + "</em>" + "</p>" +
-    "<p><strong>Relevant Coursework:</strong> " + esc(e.coursework.join(", ")) + "</p>" +
-    (e.activities ? "<p><strong>Activities:</strong> " + esc(e.activities.join(", ")) + "</p>" : "") +
-    "<h2>Experience</h2>" + S.experience.map(function (x) { return block(x.role, x.org, x); }).join("") +
-    "<h2>Projects</h2>" + S.resumeProjects.map(function (x) { return block(x.title, x.org, x); }).join("") +
-    "<h2>Leadership</h2>" + S.leadership.map(function (x) { return block(x.role, x.org, x); }).join("") +
-    '<h2>Skills</h2><div class="skills">' + S.skills.map(function (g) {
-      return "<p><strong>" + esc(g.group.charAt(0).toUpperCase() + g.group.slice(1)) + ":</strong> " + g.items.map(function (i) { return esc(i.name) + (i.detail ? " (" + esc(i.detail) + ")" : ""); }).join(", ") + "</p>";
-    }).join("") + "</div>";
-})();
-</script>
+<p>Opening the resume… <a href="assets/Sadi_Rabin_Resume.pdf?v=2026-11-15">Open Sadi Rabin's resume (PDF)</a></p>
 </body>
 </html>

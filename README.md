@@ -12,17 +12,16 @@ Live at **https://sadirabin.github.io**
 | `index.html` | Page shell (title and meta description live here). |
 | `styles.css` | Design: colors, type, layout, dark mode. |
 | `app.js` | Turns `data.js` into the page, plus the inventory demo. |
-| `resume.html` | Resume page built from `data.js` (no phone number). |
 | `assets/` | Resume PDF, prompt-engineering notes, demo video, your headshot. |
 
 ## Common edits
 
-- **After editing `data.js`, `app.js` or `styles.css`:** bump the `?v=` number on their links in `index.html` (and `data.js` in `resume.html`) so browsers fetch the new version.
+- **After editing `data.js`, `app.js` or `styles.css`:** bump the `?v=` number on their links in `index.html` so browsers fetch the new version.
 
 - **Add a project:** copy one `{ ... }` block in `projects` inside `data.js` and change the text.
 - **Add your headshot:** put the photo in `assets/` and set `meta.headshot`, e.g. `"assets/headshot.jpg"`.
 - **Fill a placeholder:** search `data.js` for `[PLACEHOLDER`. Anything still marked shows highlighted on the site.
-- **Resume PDF:** `assets/Sadi_Rabin_Resume.pdf` is your own web version (no phone number, no GPA). To update it, export a new web version and save it over that file.
+- **Resume PDF:** `assets/Sadi_Rabin_Resume.pdf` is your own web version (no phone number, no GPA). To update it, save the new PDF over that file, change the `?v=` date on `resumePdf` in `data.js`, then commit and push in GitHub Desktop. Every "Resume" link on the site opens this file.
 
 ## Preview locally
 

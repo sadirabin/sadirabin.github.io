@@ -23,8 +23,8 @@ window.SITE = {
     headshot: "assets/headshot.jpg",
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf",
-    resumePage: "resume.html"
+    // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15"
   },
 
   hero: {

@@ -49,7 +49,7 @@
       '<div class="cta-row">' +
         '<a class="btn" href="mailto:' + esc(S.meta.email) + '">Contact me</a>' +
         '<a class="link-arrow" href="#work">See the work ↓</a>' +
-        '<a class="link-arrow" href="' + esc(S.meta.resumePage) + '">Resume →</a>' +
+        '<a class="link-arrow" href="' + esc(S.meta.resumePdf) + '" target="_blank" rel="noopener">Resume (PDF) →</a>' +
       "</div>" +
     "</div>" +
     '<aside class="hero-side" aria-label="At a glance">' + portrait +
@@ -152,7 +152,7 @@
     '<a href="' + esc(S.meta.linkedin) + '" target="_blank" rel="noopener">LinkedIn →</a>' +
     '<a href="' + esc(S.meta.resumePdf) + '" download>Download resume (PDF) ↓</a></div>';
   $("footer").innerHTML = "<span>© " + new Date().getFullYear() + " " + esc(S.meta.name) + " · " + esc(S.meta.location) + "</span>" +
-    '<span><a href="' + esc(S.meta.resumePage) + '">Resume</a> · <a href="' + esc(S.meta.linkedin) + '" target="_blank" rel="noopener">' + esc(S.meta.linkedinLabel) + "</a></span>";
+    '<span><a href="' + esc(S.meta.resumePdf) + '" target="_blank" rel="noopener">Resume (PDF)</a> · <a href="' + esc(S.meta.linkedin) + '" target="_blank" rel="noopener">' + esc(S.meta.linkedinLabel) + "</a></span>";
 
   /* ---------- Interactive inventory demo (sample data) ---------- */
   var demo = $("demo");
