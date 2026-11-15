@@ -24,7 +24,7 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15d"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15e"
   },
 
   hero: {
@@ -37,7 +37,7 @@ window.SITE = {
     // Three proof points shown beside the headline. All from the resume.
     proof: [
       { value: "99+", label: "plant products consolidated into one validated report" },
-      { value: "1 day", label: "of manual weekly tallying replaced, as reported by the staff member who did it" },
+      { value: "Fridays back", label: "for the head of sales and marketing, whose weekly tally took the whole day" },
       { value: "8", label: "model-prompt combinations compared: four LLMs under two prompt structures" }
     ]
   },
@@ -60,7 +60,7 @@ window.SITE = {
       did:
         "Built a company-wide digital inventory tracking system: a two-tier Excel design with SUMIFS- and TEXTJOIN-based automation, automated data-quality checks, and a bilingual English/Spanish entry interface.",
       result:
-        "One validated weekly report covering 40,000–50,000 plants across 99+ products. The weekly tally, which the staff member responsible reported took a full day by hand, became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the head of sales and marketing, with a staff-wide pilot planned.",
+        "One validated weekly report covering 40,000–50,000 plants across 99+ products. The weekly tally used to take the head of sales and marketing her whole Friday; she said the system eliminated her Fridays. It became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the head of sales and marketing, with a staff-wide pilot planned.",
       tools: ["Excel", "SUMIFS", "TEXTJOIN", "FILTER", "Data-quality checks", "Stakeholder interviews"],
       stats: [
         { value: "40–50K", label: "plants tracked weekly across 99+ products" },
@@ -240,7 +240,7 @@ window.SITE = {
       place: "Homestead, FL",
       bullets: [
         "Traced inaccurate client-facing reports to inconsistent handwritten inventory logs by interviewing sales, production and ownership across 5 shade houses and 2 greenhouses",
-        "Designed a two-tier Excel system to replace a 30+ year-old paper process, tracking 40,000–50,000 plants across 99+ products weekly in one validated report, replacing a weekly tally the staff member responsible reported took a full day",
+        "Designed a two-tier Excel system to replace a 30+ year-old paper process, tracking 40,000–50,000 plants across 99+ products weekly in one validated report, freeing the head of sales and marketing's Fridays, which the manual tally had taken up",
         "Automated roll-ups and data-quality checks with SUMIFS and TEXTJOIN, and built a bilingual English/Spanish entry form so Spanish-speaking floor staff could log counts directly",
         "Presented the system to ownership; adopted by the head of sales and marketing, with a staff-wide pilot planned"
       ]
