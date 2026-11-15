@@ -89,6 +89,62 @@
     });
   }
 
+  /* ---------- Market dashboard (used when a project has `dashboard`) ---------- */
+  var fmt = function (n) { return n.toLocaleString("en-US"); };
+  function tip(text) { return ' tabindex="0" data-tip="' + esc(text) + '" aria-label="' + esc(text) + '"'; }
+
+  function hbars(rows, valueOf, labelOf, tipOf) {
+    var max = Math.max.apply(null, rows.map(valueOf));
+    return '<ul class="wb-hbars">' + rows.map(function (r) {
+      var w = Math.max(0.6, valueOf(r) / max * 100);
+      return '<li' + (r.hi ? ' class="is-hi"' : "") + tip(tipOf(r)) + '><span class="wb-lab">' + t(r.label) + '</span>' +
+        '<span class="wb-track"><span class="wb-bar' + (r.hi ? " is-hi" : "") + '" style="width:' + w + '%"></span></span>' +
+        '<span class="wb-val">' + labelOf(r) + "</span></li>";
+    }).join("") + "</ul>";
+  }
+
+  function yearBars(rows) {
+    var max = Math.max.apply(null, rows.map(function (r) { return r.three + r.other; }));
+    return '<div class="wb-cols" role="list">' + rows.map(function (r) {
+      var total = r.three + r.other, h = total / max * 100;
+      var hi = r.three ? Math.max(4, r.three / max * 100) : 0;
+      var partial = r.year === 2023 ? " (partial year)" : "";
+      return '<div class="wb-col" role="listitem"' + tip(r.year + partial + ": " + fmt(total) + " alphabet workbooks, " + r.three + " with all three") + '>' +
+        '<span class="wb-stack" style="height:' + h + '%">' +
+          (r.three ? '<span class="wb-flag">' + r.three + "</span>" : "") +
+          '<span class="wb-seg wb-other" style="flex:1"></span>' +
+          (hi ? '<span class="wb-seg is-hi" style="height:' + (hi / h * 100) + '%"></span>' : "") +
+        "</span>" +
+        '<span class="wb-year">' + (r.year % 2 === 0 || r.year === 2023 ? "’" + String(r.year).slice(2) : "") + "</span></div>";
+    }).join("") + "</div>";
+  }
+
+  function dashboardBlock(d) {
+    var tiles = d.tiles.map(function (x) {
+      return '<div class="wb-tile wb-' + esc(x.style) + '"><span class="wb-big">' + t(x.value) + "</span><span>" + t(x.text) + "</span></div>";
+    }).join("");
+    var card = function (c, body, cls) {
+      return '<section class="wb-card ' + (cls || "") + '"><h4>' + t(c.title) + '</h4><p class="wb-sub">' + t(c.subtitle) + "</p>" + body + "</section>";
+    };
+    var key = '<p class="wb-key"><span class="wb-sw is-hi"></span>All three features <span class="wb-sw"></span>Everything else</p>';
+    return '<div class="case-demo"><div class="wbdash" role="group" aria-label="' + esc(d.title) + '">' +
+      '<p class="wb-title">' + t(d.title) + "</p>" +
+      '<div class="wb-row wb-top">' + tiles +
+        card(d.segments, hbars(d.segments.rows, function (r) { return r.three / r.titles; },
+          function (r) { return (r.three / r.titles * 100).toFixed(2) + "%"; },
+          function (r) { return r.label + ": " + r.three + " of " + fmt(r.titles) + " titles (" + (r.three / r.titles * 100).toFixed(2) + "%)"; }), "wb-seg-card") +
+      "</div>" +
+      '<div class="wb-row wb-bottom">' +
+        card(d.combos, hbars(d.combos.rows, function (r) { return r.titles; },
+          function (r) { return fmt(r.titles); },
+          function (r) { return r.label + ": " + fmt(r.titles) + " titles"; })) +
+        card(d.years, yearBars(d.years.rows) + key) +
+      "</div>" +
+      '<p class="wb-note">' + t(d.note) + "</p>" +
+      '<div class="wb-tip" role="tooltip" hidden></div>' +
+    "</div></div>";
+  }
+
   /* ---------- Projects ---------- */
   $("projects").innerHTML = S.projects.map(function (p, i) {
     var meta = [p.org && "<strong>" + t(p.org) + "</strong>", p.role && t(p.role), t(p.dates), t(p.place)].filter(Boolean).join("<br>");
@@ -108,8 +164,30 @@
       "</div>" +
       (p.demo === "inventory" ? '<div class="case-demo"><div class="demo" id="demo"></div></div>' : "") +
       (p.before || p.embed ? showcase(p) : "") +
+      (p.dashboard ? dashboardBlock(p.dashboard) : "") +
     "</article>";
   }).join("");
+
+  /* Hover / focus tooltip for the market dashboard */
+  document.querySelectorAll(".wbdash").forEach(function (dash) {
+    var box = dash.querySelector(".wb-tip");
+    function show(el, x, y) {
+      box.textContent = el.getAttribute("data-tip"); box.hidden = false;
+      var r = dash.getBoundingClientRect(), bw = box.offsetWidth;
+      box.style.left = Math.min(Math.max(8, x - r.left + 12), r.width - bw - 8) + "px";
+      box.style.top = (y - r.top + 14) + "px";
+    }
+    dash.addEventListener("mousemove", function (e) {
+      var el = e.target.closest("[data-tip]");
+      if (el) show(el, e.clientX, e.clientY); else box.hidden = true;
+    });
+    dash.addEventListener("mouseleave", function () { box.hidden = true; });
+    dash.addEventListener("focusin", function (e) {
+      var el = e.target.closest("[data-tip]"); if (!el) return;
+      var b = el.getBoundingClientRect(); show(el, b.left + b.width / 2, b.bottom);
+    });
+    dash.addEventListener("focusout", function () { box.hidden = true; });
+  });
 
   fitEmbeds();
   if (window.ResizeObserver) {

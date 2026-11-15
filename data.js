@@ -121,7 +121,176 @@ window.SITE = {
         { value: "92%", label: "agreement between the rules and a 75-book review on three-in-one titles" },
         { value: "72,852", label: "children's titles classified" }
       ],
-      links: []
+      links: [],
+      // Interactive dashboard shown under this project. Numbers come from work/kdp/viz/*.csv.
+      dashboard: {
+        "title": "Is the three-in-one workbook gap real?",
+        "note": "Source: Amazon Reviews 2023 (McAuley Lab, UC San Diego), listings through 2023; 2023 is a partial year. Features tagged by keyword rules checked against a 75-book review (92% agreement on three-in-one titles).",
+        "tiles": [
+          {
+            "style": "dark",
+            "value": "6 of 1,979",
+            "text": "early-childhood alphabet workbooks combine coloring, letter tracing and fun facts (0.3%)"
+          },
+          {
+            "style": "yellow",
+            "value": "285",
+            "text": "already pair coloring with letter tracing. Fun facts is the missing piece."
+          }
+        ],
+        "combos": {
+          "title": "Coloring + tracing is common. Adding fun facts is what's rare.",
+          "subtitle": "Early-childhood alphabet workbooks by feature combination",
+          "rows": [
+            {
+              "label": "Coloring only",
+              "titles": 774,
+              "hi": false
+            },
+            {
+              "label": "None of the three",
+              "titles": 528,
+              "hi": false
+            },
+            {
+              "label": "Tracing only",
+              "titles": 349,
+              "hi": false
+            },
+            {
+              "label": "Coloring + tracing",
+              "titles": 285,
+              "hi": false
+            },
+            {
+              "label": "Coloring + fun facts",
+              "titles": 27,
+              "hi": false
+            },
+            {
+              "label": "Fun facts only",
+              "titles": 9,
+              "hi": false
+            },
+            {
+              "label": "All three",
+              "titles": 6,
+              "hi": true
+            },
+            {
+              "label": "Tracing + fun facts",
+              "titles": 1,
+              "hi": false
+            }
+          ]
+        },
+        "years": {
+          "title": "The market boomed after 2017. Three-in-one books stayed a sliver.",
+          "subtitle": "Early-childhood alphabet workbooks published per year",
+          "rows": [
+            {
+              "year": 2010,
+              "three": 0,
+              "other": 25
+            },
+            {
+              "year": 2011,
+              "three": 0,
+              "other": 17
+            },
+            {
+              "year": 2012,
+              "three": 0,
+              "other": 22
+            },
+            {
+              "year": 2013,
+              "three": 0,
+              "other": 26
+            },
+            {
+              "year": 2014,
+              "three": 0,
+              "other": 28
+            },
+            {
+              "year": 2015,
+              "three": 0,
+              "other": 39
+            },
+            {
+              "year": 2016,
+              "three": 0,
+              "other": 59
+            },
+            {
+              "year": 2017,
+              "three": 0,
+              "other": 116
+            },
+            {
+              "year": 2018,
+              "three": 0,
+              "other": 197
+            },
+            {
+              "year": 2019,
+              "three": 0,
+              "other": 148
+            },
+            {
+              "year": 2020,
+              "three": 2,
+              "other": 305
+            },
+            {
+              "year": 2021,
+              "three": 3,
+              "other": 397
+            },
+            {
+              "year": 2022,
+              "three": 0,
+              "other": 324
+            },
+            {
+              "year": 2023,
+              "three": 1,
+              "other": 129
+            }
+          ]
+        },
+        "segments": {
+          "title": "Even in its own niche, the format is under 1%.",
+          "subtitle": "Share of titles with all three features",
+          "rows": [
+            {
+              "label": "All children's titles",
+              "titles": 72852,
+              "three": 15,
+              "hi": false
+            },
+            {
+              "label": "Early childhood",
+              "titles": 32226,
+              "three": 8,
+              "hi": false
+            },
+            {
+              "label": "Early-childhood workbooks",
+              "titles": 10342,
+              "three": 8,
+              "hi": false
+            },
+            {
+              "label": "Early-childhood alphabet workbooks",
+              "titles": 1979,
+              "three": 6,
+              "hi": true
+            }
+          ]
+        }
+      }
     },
     {
       id: "llm",
