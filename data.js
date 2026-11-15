@@ -24,7 +24,7 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15c"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15d"
   },
 
   hero: {
@@ -100,6 +100,28 @@ window.SITE = {
       ],
       recommendation:
         "Cap routine discounts at 20%, review Tables and Bookcases pricing, and audit promotions in Texas, Ohio, Pennsylvania and Illinois."
+    },
+    {
+      id: "workbook-market",
+      title: "Is the Three-in-One Workbook Gap Real?",
+      org: "Python + SQL market analysis",
+      role: "",
+      dates: "Nov 2026",
+      place: "",
+      summary: "Testing my own product's market gap against 72,852 Amazon listings instead of a hand-picked sample.",
+      problem:
+        "My children's workbooks are built on a gap I found by reviewing 50+ competing titles by hand: few books combine coloring, alphabet letter tracing and fun facts. A sample that small can't show how rare the combination really is.",
+      did:
+        "Built an AI-assisted pipeline: Python streamed the public Amazon Reviews 2023 book metadata (4.4 million records) down to 72,852 children's titles, keyword rules tagged each one for theme coloring, letter tracing, theme fun facts and an early-childhood audience, and SQL compared the segments. I checked the rules against a 75-book review and tightened them when my definitions and theirs disagreed.",
+      result:
+        "Only 6 of 1,979 early-childhood alphabet workbooks (0.3%) combined all three. 285 already paired coloring with letter tracing, so fun facts is the piece that sets the format apart. Caveats: the data ends in 2023, and three-in-one titles averaged fewer ratings (176 vs 309), so the gap is real but demand is unproven.",
+      tools: ["Python", "SQL (SQLite)", "Keyword classification", "Rule validation", "AI-assisted coding"],
+      stats: [
+        { value: "6 of 1,979", label: "early-childhood alphabet workbooks with all three features" },
+        { value: "92%", label: "agreement between the rules and a 75-book review on three-in-one titles" },
+        { value: "72,852", label: "children's titles classified" }
+      ],
+      links: []
     },
     {
       id: "llm",
@@ -229,7 +251,7 @@ window.SITE = {
       dates: "Jan 2025 – Present",
       place: "Rockville, MD",
       bullets: [
-        "Identified a gap in the children's workbook market through a competitive analysis of 50+ titles, none of which in that sample combined coloring, tracing and fun facts",
+        "Spotted a market gap in 50+ titles, then tested it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
         "Designed and published 2 workbooks around that concept, using keyword search-volume data across 3 content categories to choose titles and positioning",
         "Generated illustrations with Canva's AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator"
       ]
