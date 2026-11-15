@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sadi Rabin · Product and business analysis, business systems and automation</title>
+<meta name="description" content="Sadi Rabin is an Information Systems & Marketing student at UMD's Smith School of Business who turns messy, manual business data into accurate, client-ready reporting systems.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Sadi Rabin · Portfolio">
+<meta property="og:description" content="Turning messy, manual business data into accurate, client-ready reporting systems.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B6B43'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='16' font-weight='700' text-anchor='middle' fill='%23fff'%3ESR%3C/text%3E%3C/svg%3E">
+<script>
+  // Set the theme before first paint so there is no flash.
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem("theme"); } catch (e) {}
+    if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = t;
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:ital,wght@0,400..700;1,400&display=swap">
+<link rel="stylesheet" href="styles.css?v=20261115e">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav aria-label="Sections">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#design">This site</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">
+      <span class="theme-dot" aria-hidden="true"></span><span id="themeLabel">Dark mode</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+  <section class="hero wrap" id="hero" aria-labelledby="hero-h"></section>
+
+  <section class="wrap section" id="work" aria-labelledby="work-h">
+    <div class="section-head">
+      <p class="kicker">Selected work</p>
+      <h2 id="work-h">Projects, each a problem solved.</h2>
+    </div>
+    <div id="projects"></div>
+  </section>
+
+  <section class="wrap section" id="skills" aria-labelledby="skills-h">
+    <div class="section-head">
+      <p class="kicker">Skills</p>
+      <h2 id="skills-h">Tools I work in.</h2>
+    </div>
+    <div class="skills" id="skillsBody"></div>
+  </section>
+
+  <section class="wrap section" id="experience" aria-labelledby="exp-h">
+    <div class="section-head">
+      <p class="kicker">Experience &amp; leadership</p>
+      <h2 id="exp-h">Where I've worked and led.</h2>
+    </div>
+    <div id="experienceBody"></div>
+  </section>
+
+  <section class="wrap section" id="design" aria-labelledby="design-h">
+    <div class="section-head">
+      <p class="kicker">Colophon</p>
+      <h2 id="design-h">How I designed this site.</h2>
+    </div>
+    <div id="designBody"></div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap" id="contactBody"></div>
+  </section>
+</main>
+
+<footer class="wrap site-footer" id="footer"></footer>
+
+<noscript><p class="wrap" style="padding:2rem 0">This site needs JavaScript to display its content. You can reach Sadi Rabin at sadirabin@gmail.com.</p></noscript>
+
+<script src="data.js?v=20261115e"></script>
+<script src="app.js?v=20261115e"></script>
+</body>
+</html>
