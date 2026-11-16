@@ -24,7 +24,7 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-15e"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-16a"
   },
 
   hero: {
@@ -182,9 +182,9 @@ window.SITE = {
       problem:
         "The children's workbook market looked saturated, but in a competitive analysis of 50+ titles, none in that sample combined coloring, tracing and fun facts in one product.",
       did:
-        "Combined the three into a single product concept and used keyword search-volume data across three content categories to choose titles and positioning. Generated illustrations with Canva's AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator.",
+        "Combined the three into a single product concept and used Google Trends search-interest data across three content categories to choose titles and positioning. Generated illustrations with Canva's AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator.",
       result: "Two published 80-page titles in the ABC Alphabet Adventures series, ABC Alphabet Animals and ABC Alphabet Mythology. Each combines letter tracing, coloring and fun facts for ages 3 and up.",
-      tools: ["Competitive analysis", "Keyword research", "Canva AI image tools", "Amazon KDP"],
+      tools: ["Competitive analysis", "Google Trends", "Canva AI image tools", "Amazon KDP"],
       stats: [
         { value: "50+", label: "competitor titles analyzed" },
         { value: "2", label: "published titles, 80 pages each" }
@@ -200,17 +200,15 @@ window.SITE = {
     {
       group: "Data & analysis",
       items: [
-        { name: "Excel", detail: "SUMIFS, TEXTJOIN, VLOOKUP, pivot tables, Solver" },
+        { name: "Excel", detail: "SUMIFS, TEXTJOIN, VLOOKUP, pivot tables" },
         { name: "SQL", detail: "" },
-        { name: "Python", detail: "Pandas, NumPy" }
+        { name: "Python", detail: "" }
       ]
     },
     {
       group: "Visualization",
       items: [
-        { name: "Tableau", detail: "Dashboards, data stories" },
-        { name: "Power BI", detail: "" },
-        { name: "Looker Studio", detail: "" }
+        { name: "Tableau", detail: "Dashboards, data stories" }
       ]
     },
     {
@@ -259,7 +257,7 @@ window.SITE = {
       place: "Rockville, MD",
       bullets: [
         "Spotted a market gap in 50+ titles, then tested it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
-        "Designed and published 2 workbooks around that concept, using keyword search-volume data across 3 content categories to choose titles and positioning",
+        "Designed and published 2 workbooks around that concept, using Google Trends search-interest data across 3 content categories to choose titles and positioning",
         "Generated illustrations with Canva's AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator"
       ]
     },
