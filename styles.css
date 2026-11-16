@@ -262,67 +262,13 @@ mark.ph { background: var(--flag-bg); color: var(--flag); padding: .05em .35em; 
   .demo th:first-child, .demo td:first-child { display: none; }
   .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-/* Phones get Tableau's phone layout: 1,700px tall plus the toolbar. */
+/* Phones get Tableau's phone layout; its height (toolbar included) varies by dashboard. */
 @media (max-width: 767px) and (pointer: coarse) {
   .embed { aspect-ratio: auto; }
-  .embed iframe { position: static; width: 100%; height: 1730px; transform: none; }
+  .embed iframe { position: static; width: 100%; height: var(--phone-h, 1730px); transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
 }
 
-/* ---------- Market dashboard (light, yellow accent; fixed colors so it reads the same in dark mode) ---------- */
-.wbdash { --wb-page: #f2f2ef; --wb-card: #ffffff; --wb-ink: #1a1a1a; --wb-muted: #5f626a; --wb-yellow: #ffd21f; --wb-grey: #8e9199; --wb-track: #ececea;
-  position: relative; background: var(--wb-page); color: var(--wb-ink); border-radius: 14px; padding: 18px; font-family: var(--body); }
-.wb-title { font: 700 1.25rem/1.2 var(--display); letter-spacing: -0.01em; margin: 2px 4px 14px; }
-.wb-row { display: grid; gap: 12px; margin-bottom: 12px; }
-.wb-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2.2fr); }
-.wb-bottom { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.wb-card, .wb-tile { border-radius: 12px; padding: 16px 18px; }
-.wb-card { background: var(--wb-card); }
-.wb-card h4 { font: 700 1rem/1.25 var(--display); margin: 0 0 2px; color: var(--wb-ink); }
-.wb-sub { font-size: .8125rem; color: var(--wb-muted); margin-bottom: 12px; }
-.wb-tile { display: flex; flex-direction: column; justify-content: center; gap: 8px; font-size: .9375rem; line-height: 1.35; }
-.wb-big { font: 800 2.25rem/1 var(--display); letter-spacing: -0.02em; }
-.wb-dark { background: var(--wb-ink); color: #ffffff; }
-.wb-dark .wb-big { color: var(--wb-yellow); }
-.wb-yellow { background: var(--wb-yellow); color: var(--wb-ink); }
-.wb-hbars { display: grid; gap: 6px; }
-.wb-hbars li { display: grid; grid-template-columns: minmax(0, 9.5rem) minmax(0, 1fr) 3.4rem; align-items: center; gap: 10px; font-size: .8125rem; border-radius: 4px; outline-offset: 2px; }
-.wb-lab { color: var(--wb-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.wb-track { height: 14px; }
-.wb-bar { display: block; height: 100%; background: var(--wb-grey); border-radius: 0 4px 4px 0; }
-.wb-bar.is-hi, .wb-seg.is-hi, .wb-sw.is-hi { background: var(--wb-yellow); box-shadow: inset 0 0 0 1px var(--wb-ink); }
-.wb-val { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
-.wb-seg-card .wb-hbars li { grid-template-columns: minmax(0, 15.5rem) minmax(0, 1fr) 3.4rem; }
-.wb-hbars li.is-hi .wb-lab { font-weight: 700; }
-.wb-hbars li.is-hi .wb-val { justify-self: end; background: var(--wb-yellow); border: 1px solid var(--wb-ink); border-radius: 999px; padding: 0 7px; }
-.wb-cols { display: grid; grid-template-columns: repeat(14, minmax(0, 1fr)); gap: 3px; align-items: end; height: 170px; padding-top: 18px; }
-.wb-col { position: relative; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; border-radius: 4px; outline-offset: 2px; }
-.wb-stack { position: relative; display: flex; flex-direction: column; width: 100%; }
-.wb-seg { display: block; width: 100%; }
-.wb-other { background: var(--wb-grey); border-radius: 4px 4px 0 0; }
-.wb-seg.is-hi { border-radius: 0; }
-.wb-flag { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); font: 700 .6875rem/1 var(--body); background: var(--wb-yellow); color: var(--wb-ink); border: 1px solid var(--wb-ink); border-radius: 999px; padding: 2px 5px; }
-.wb-year { position: absolute; bottom: -18px; white-space: nowrap; left: 0; right: 0; text-align: center; font-size: .6875rem; color: var(--wb-muted); }
-.wb-key { display: flex; align-items: center; gap: 6px; font-size: .75rem; color: var(--wb-muted); margin-top: 28px; }
-.wb-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--wb-grey); margin-left: 8px; }
-.wb-sw.is-hi { margin-left: 0; }
-.wb-note { font-size: .75rem; color: var(--wb-muted); margin: 4px 4px 0; }
-.wb-tip { position: absolute; z-index: 5; max-width: 260px; background: var(--wb-ink); color: #ffffff; font-size: .8125rem; line-height: 1.35; padding: 6px 10px; border-radius: 6px; pointer-events: none; }
-.wbdash [data-tip]:hover .wb-bar, .wbdash [data-tip]:focus .wb-bar, .wbdash [data-tip]:hover .wb-seg, .wbdash [data-tip]:focus .wb-seg { filter: brightness(.9); }
-.wbdash [data-tip]:focus-visible { outline: 2px solid var(--wb-ink); }
-@media (max-width: 900px) {
-  .wb-top, .wb-bottom { grid-template-columns: minmax(0, 1fr); }
-  .wb-top { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .wb-seg-card { grid-column: 1 / -1; }
-}
-@media (max-width: 560px) {
-  .wbdash { padding: 12px; }
-  .wb-top { grid-template-columns: minmax(0, 1fr); }
-  .wb-hbars li, .wb-seg-card .wb-hbars li { grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr) 3rem; }
-  .wb-big { font-size: 1.875rem; }
-  .wb-seg-card .wb-hbars li { grid-template-columns: minmax(0, 1fr) 3.4rem; row-gap: 3px; }
-  .wb-seg-card .wb-lab { grid-column: 1 / -1; white-space: normal; }
-}
