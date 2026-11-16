@@ -124,7 +124,7 @@ window.SITE = {
       links: [],
       embed: {
         tag: "Live dashboard",
-        phoneHeight: 1130,
+        phoneHeight: 1530,
         src: "https://public.tableau.com/views/Base_17948034157440/WorkbookMarketGap?:embed=y&:showVizHome=no&:display_count=no",
         title: "Interactive Tableau dashboard: Is the Three-in-One Workbook Gap Real?",
         link: { label: "View on Tableau Public", href: "https://public.tableau.com/app/profile/sadi.rabin/viz/Base_17948034157440/WorkbookMarketGap" }
