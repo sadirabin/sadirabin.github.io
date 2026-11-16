@@ -37,7 +37,7 @@ window.SITE = {
     // Three proof points shown beside the headline. All from the resume.
     proof: [
       { value: "99+", label: "plant products consolidated into one validated report" },
-      { value: "Fridays back", label: "for the head of sales and marketing, whose weekly tally took the whole day" },
+      { value: "6 hrs → <1", label: "weekly inventory tally, estimated, for the marketing head and sales specialist" },
       { value: "8", label: "model-prompt combinations compared: four LLMs under two prompt structures" }
     ]
   },
@@ -60,7 +60,7 @@ window.SITE = {
       did:
         "Built a company-wide digital inventory tracking system: a two-tier Excel design with SUMIFS- and TEXTJOIN-based automation, automated data-quality checks, and a bilingual English/Spanish entry interface.",
       result:
-        "One validated weekly report covering 40,000–50,000 plants across 99+ products. The weekly tally used to take the head of sales and marketing her whole Friday; she said the system eliminated her Fridays. It became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the head of sales and marketing, with a staff-wide pilot planned.",
+        "One validated weekly report covering 40,000–50,000 plants across 99+ products. The weekly tally used to take the marketing head and sales specialist about 6 hours; with the new system it is an estimated under 1 hour of data entry. It became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the marketing head, with a staff-wide pilot planned.",
       tools: ["Excel", "SUMIFS", "TEXTJOIN", "FILTER", "Data-quality checks", "Stakeholder interviews"],
       stats: [
         { value: "40–50K", label: "plants tracked weekly across 99+ products" },
@@ -229,9 +229,8 @@ window.SITE = {
     date: "Expected May 2028",
     coursework: [
       "Database Management",
-      "Business Analytics & Programming",
-      "Financial & Managerial Accounting",
-      "Finance"
+      "Business Analytics & Programming (Python, Pandas, NumPy)",
+      "Accounting"
     ],
     activities: ["Black Business Association", "Ethiopian Student Association"]
   },
@@ -245,9 +244,10 @@ window.SITE = {
       place: "Homestead, FL",
       bullets: [
         "Traced inaccurate client-facing reports to inconsistent handwritten inventory logs by interviewing sales, production and ownership across 5 shade houses and 2 greenhouses",
-        "Designed a two-tier Excel system to replace a 30+ year-old paper process, tracking 40,000–50,000 plants across 99+ products weekly in one validated report, freeing the head of sales and marketing's Fridays, which the manual tally had taken up",
+        "Designed a two-tier Excel system to replace a paper process used for 30+ years, tracking 40,000–50,000 plants across 99+ products weekly in one validated report",
+        "Cut the weekly tally done by the marketing head and sales specialist from about 6 hours to an estimated under 1 hour",
         "Automated roll-ups and data-quality checks with SUMIFS and TEXTJOIN, and built a bilingual English/Spanish entry form so Spanish-speaking floor staff could log counts directly",
-        "Presented the system to ownership; adopted by the head of sales and marketing, with a staff-wide pilot planned"
+        "Presented the system to ownership; adopted by the marketing head, with a staff-wide pilot planned"
       ]
     },
     {
@@ -256,9 +256,9 @@ window.SITE = {
       dates: "Jan 2025 – Present",
       place: "Rockville, MD",
       bullets: [
-        "Spotted a market gap in 50+ titles, then tested it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
-        "Designed and published 2 workbooks around that concept, using Google Trends search-interest data across 3 content categories to choose titles and positioning",
-        "Generated illustrations with Canva's AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator"
+        "Spotted a possible market gap while reviewing 50+ competing titles, then tested it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
+        "Published 2 workbooks built around that concept, using Google Trends search interest across 3 content categories to choose titles",
+        "Generated illustrations with Canva's generative AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator"
       ]
     },
     {
@@ -267,9 +267,8 @@ window.SITE = {
       dates: "Jun 2025 – Jul 2025",
       place: "Palmer, MA",
       bullets: [
-        "Created and led division-wide events for 75+ campers, such as 6-team water capture the flag, delegating roles (captains, referees) so every counselor had a job",
-        "Talked with campers and staff to learn what each kid enjoyed, and designed alternative activities for campers who didn't want to compete so everyone could take part",
-        "Supervised a 15-camper bunk and turned around low morale: from not wanting to return to 100% committing to come back"
+        "Gathered input from campers and staff on what each kid enjoyed, then designed division-wide events for 75+ campers (such as 6-team capture the flag) with alternative activities for non-competitive kids",
+        "Supervised a 15-camper bunk and turned around low morale: from not wanting to return to all 15 committing to come back"
       ]
     }
   ],
@@ -285,7 +284,7 @@ window.SITE = {
       bullets: [
         "Wrote SQL queries to clean and analyze 9,994 retail order lines, finding that lines discounted over 20% were 14% of all lines but caused 89% of all losses ($138.5K of $156.1K)",
         "Rebuilt a team class project into a published, interactive Tableau dashboard tracing those losses to specific states and product lines; recommended a 20% discount cap",
-        "Used generative AI to critique the design and iterated on it, replacing pie charts and maps with ranked comparisons and a click-to-filter view"
+        "Replaced pie charts and maps with ranked comparisons and a click-to-filter view (refined using generative AI feedback), so a reader can find the loss-driving states quickly"
       ]
     },
     {
@@ -294,8 +293,8 @@ window.SITE = {
       dates: "Mar 2026 – Apr 2026",
       place: "",
       bullets: [
-        "Compared how 4 AI chatbots (ChatGPT, Gemini, Claude, Perplexity) handled the same financial-advice task under 2 prompt structures (COSTAR and a 6-step format), 8 model-and-prompt combinations in all",
-        "Reviewed each output for structure and depth; Claude gave the most organized plan under both prompt structures"
+        "Created 2 prompt structures (COSTAR and a 6-step format) for a beginner investment-advisor assistant and ran each on 4 AI chatbots (ChatGPT, Gemini, Claude, Perplexity), 8 combinations in all",
+        "Judged each plan on its 4 required sections (strategy summary, asset allocation, savings plan, risk analysis), clarity of layout and depth of financial reasoning: Claude ranked first under both prompts, Perplexity last"
       ]
     },
     {
@@ -305,7 +304,7 @@ window.SITE = {
       place: "",
       bullets: [
         "Built an n8n workflow pulling job postings (Indeed), movie info (IMDb) and local weather into one automated feed, replacing daily checks of 3 sites",
-        "Coordinated a main agent and 3 sub-agents to call each REST API and clean nested JSON into structured tables"
+        "Split it into a main agent that routes requests to 3 sub-agents, each calling its own REST API and cleaning nested JSON into tables"
       ]
     }
   ],
@@ -317,7 +316,7 @@ window.SITE = {
       dates: "Sep 2025 – Present",
       place: "College Park, MD",
       bullets: [
-        "Helped grow a new chapter from 0 to 67+ members in its first year by running recruitment events, leading outreach and shaping recruitment and brotherhood strategy"
+        "Grew a new chapter from 0 to 67+ members in its first year as part of the founding team, running events, leading outreach and shaping recruitment and brotherhood strategy"
       ],
       stat: { value: "67+", label: "members within one year" }
     }
