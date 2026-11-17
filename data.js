@@ -169,7 +169,7 @@ window.SITE = {
         { value: "1 + 3", label: "main agent coordinating three sub-agents" },
         { value: "3", label: "live API sources aggregated" }
       ],
-      links: [{ label: "Watch the demo (video)", href: "assets/ai-agent-demo.mp4" }]
+      links: [{ label: "Watch the demo (51s video)", href: "assets/ai-agent-demo.mp4?v=2026-11-16" }]
     },
     {
       id: "kdp",
