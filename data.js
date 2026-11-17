@@ -24,7 +24,7 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-16j"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-16k"
   },
 
   hero: {
@@ -256,7 +256,7 @@ window.SITE = {
       dates: "Jan 2025 – Present",
       place: "Rockville, MD",
       bullets: [
-        "Spotted a possible market gap while reviewing 50+ competing titles, then tested it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
+        "Identified a market gap across 50+ competing titles, then validated it on 72,852 Amazon listings with AI-assisted Python and SQL: only 6 of 1,979 early-childhood alphabet workbooks combined coloring, letter tracing and fun facts",
         "Published 2 workbooks built around that concept, using Google Trends data across 3 content categories to choose titles",
         "Generated illustrations with Canva's generative AI image tools, then reviewed every image and hand-fixed AI errors (distorted hands, missing or excess detail), avoiding the cost of an illustrator"
       ]
