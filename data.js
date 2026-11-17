@@ -24,12 +24,12 @@ window.SITE = {
     headshotAlt: "Portrait of Sadi Rabin",
     tableau: "https://public.tableau.com/app/profile/sadi.rabin",
     // Your resume PDF. After replacing the file, change the ?v= date so browsers fetch the new copy.
-    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-16k"
+    resumePdf: "assets/Sadi_Rabin_Resume.pdf?v=2026-11-17a"
   },
 
   hero: {
     eyebrow: "Information Systems & Marketing · UMD Smith School of Business",
-    headline: "I turn messy, manual business data into accurate, client-ready reporting systems.",
+    headline: "I transform manual business data into accurate, client-ready reporting systems.",
     intro:
       "Information Systems & Marketing student at the University of Maryland's Robert H. Smith School of Business, working in SQL, Excel and Tableau with a focus on data quality, validation and clear client communication.",
     rolesLabel: "Open to roles in",
@@ -60,10 +60,10 @@ window.SITE = {
       did:
         "Built a company-wide digital inventory tracking system: a two-tier Excel design with SUMIFS- and TEXTJOIN-based automation, automated data-quality checks, and a bilingual English/Spanish entry interface.",
       result:
-        "One validated weekly report covering 40,000–50,000 plants across 99+ products. Producing the weekly availability documents used to take the marketing head and sales specialist a full workday; with the new system it takes under 1 hour, plus any optional edits she chooses to make. It became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the marketing head, with a staff-wide pilot planned.",
+        "One validated weekly report covering 40,000–50,000 houseplants across 99+ products. Producing the weekly availability documents used to take the marketing head and sales specialist a full workday; with the new system it takes under 1 hour, plus any optional edits she chooses to make. It became a single entry step: counts go in once, the sales-team summary recalculates, and a client-facing availability sheet fills in size, variety, quantity and readiness status automatically. Staff add the remaining columns by hand, then export it to PDF. Presented to ownership and adopted by the marketing head, with a staff-wide pilot planned.",
       tools: ["Excel", "SUMIFS", "TEXTJOIN", "FILTER", "Data-quality checks", "Stakeholder interviews"],
       stats: [
-        { value: "40–50K", label: "plants tracked weekly across 99+ products" },
+        { value: "40–50K", label: "houseplants tracked weekly across 99+ products" },
         { value: "7", label: "growing houses covered (5 shade houses, 2 greenhouses)" }
       ],
       links: [],
@@ -244,7 +244,7 @@ window.SITE = {
       place: "Homestead, FL",
       bullets: [
         "Traced inaccurate client-facing reports to inconsistent handwritten inventory logs by interviewing sales, production and ownership across 5 shade houses and 2 greenhouses",
-        "Designed a two-tier Excel system to replace a paper process used for 30+ years: 7 section logs covering 40,000–50,000 plants across 99+ products feed a sales-facing availability summary and a client-facing availability PDF",
+        "Designed a two-tier Excel system to replace a paper process used for 30+ years: 7 section logs covering 40,000–50,000 houseplants across 99+ products feed a sales-facing availability summary and a client-facing availability PDF",
         "Cut the marketing head and sales specialist's weekly time on both documents from a full workday to under 1 hour",
         "Automated roll-ups and data-quality checks with SUMIFS and TEXTJOIN, and built a bilingual English/Spanish entry form so Spanish-speaking floor staff could log counts directly",
         "Presented the system to ownership; adopted by the marketing head, with a staff-wide pilot planned"
